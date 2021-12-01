@@ -1,8 +1,10 @@
 import React from 'react'
 import { Box, Typography, Button } from '@mui/material'
 import Profit from '../../../Assets/onboarding3.png'
+import { useNavigate } from "react-router-dom"
 
 function OnboardingProfitScreen() {
+    const navigate = useNavigate()
     return (
         <Box
             sx={{
@@ -18,7 +20,7 @@ function OnboardingProfitScreen() {
                 overflowX: 'hidden'
             }}
         >
-            <Box alignSelf='end'>
+            <Box alignSelf='end' onClick={() => navigate('/welcome')}>
                 Skip
             </Box>
             <Box 
@@ -33,7 +35,8 @@ function OnboardingProfitScreen() {
             </Box>
             <Box
                 sx={{
-                    mt: '-70px',
+                    mt: '-80px',
+                    mb: '180px'
                 }}
             >
                 <Typography 
@@ -60,9 +63,9 @@ function OnboardingProfitScreen() {
             </Box>
             <Box
                 sx={{
-                    position: 'fixed',
+                    position: 'relative',
                     bottom: '10px',
-                    width: '90%',
+                    width: '100%',
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center'
@@ -87,6 +90,7 @@ function OnboardingProfitScreen() {
                         borderRadius: '5px',
                         mb: '0px'
                     }}
+                    onClick={() => navigate('/welcome')}
                 >
                     next
                 </Button>
