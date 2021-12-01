@@ -1,8 +1,10 @@
 import React from 'react'
 import { Box, Typography, Button } from '@mui/material'
 import { MdClear } from 'react-icons/md'
+import { useNavigate } from 'react-router-dom'
 
 function ForgotPasswordScreen() {
+    const navigate = useNavigate()
     return (
         <Box
             sx={{
@@ -18,7 +20,7 @@ function ForgotPasswordScreen() {
                 overflowX: 'hidden'
             }}
         >
-            <MdClear fontSize='30px' />
+            <MdClear fontSize='30px' onClick={() => navigate('/welcome')} />
             <Box>
                 <Typography 
                     sx={{
@@ -48,7 +50,7 @@ function ForgotPasswordScreen() {
                     flexDirection: 'column',
                     justifyContent: 'center',
                     gap: '5px',
-                    mb: '20rem'
+                    mb: '15rem'
                 }}
             >
                 <label 
@@ -76,9 +78,9 @@ function ForgotPasswordScreen() {
             </Box>
             <Box
                 sx={{
-                    position: 'absolute',
-                    bottom: '10px',
-                    width: '90%'
+                    position: 'relative',
+                    bottom: '0px',
+                    width: '100%'
                 }}
             >
                 <Button
@@ -88,7 +90,7 @@ function ForgotPasswordScreen() {
                         width: '100%',
                         height: '50px',
                         borderRadius: '5px',
-                        mb: '10px'
+                        mb: '0px'
                     }}
                 >
                     Recover password
