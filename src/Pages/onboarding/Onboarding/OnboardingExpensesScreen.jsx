@@ -1,8 +1,10 @@
 import React from 'react'
 import { Box, Typography, Button } from '@mui/material'
 import Expenses from '../../../Assets/onboarding2.png'
+import { useNavigate } from "react-router-dom"
 
 function OnboardingExpensesScreen() {
+    const navigate = useNavigate()
     return (
         <Box
             sx={{
@@ -18,7 +20,7 @@ function OnboardingExpensesScreen() {
                 overflowX: 'hidden'
             }}
         >
-            <Box alignSelf='end'>
+            <Box alignSelf='end' onClick={() => navigate('/welcome')}>
                 Skip
             </Box>
             <Box 
@@ -32,7 +34,8 @@ function OnboardingExpensesScreen() {
             </Box>
             <Box
                 sx={{
-                    mt: '-70px'
+                    mt: '-70px',
+                    mb: '180px'
                 }}
             >
                 <Typography 
@@ -59,9 +62,9 @@ function OnboardingExpensesScreen() {
             </Box>
             <Box
                 sx={{
-                    position: 'fixed',
+                    position: 'relative',
                     bottom: '10px',
-                    width: '90%',
+                    width: '100%',
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center'
@@ -86,6 +89,7 @@ function OnboardingExpensesScreen() {
                         borderRadius: '5px',
                         mb: '0px'
                     }}
+                    onClick={() => navigate('/onboarding3')}
                 >
                     next
                 </Button>
