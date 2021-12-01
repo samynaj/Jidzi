@@ -1,8 +1,11 @@
 import React from 'react'
 import { Box, Typography, Button } from '@mui/material'
 import { MdClear } from 'react-icons/md'
+import { useNavigate } from "react-router-dom"
+
 
 function SignupScreen() {
+    const navigate = useNavigate()
     return (
         <Box
             sx={{
@@ -18,7 +21,7 @@ function SignupScreen() {
                 overflowX: 'hidden'
             }}
         >
-            <MdClear fontSize='28px' />
+            <MdClear fontSize='28px' onClick={() => navigate('/welcome')} />
             <Box>
                 <Typography 
                     sx={{
@@ -158,7 +161,7 @@ function SignupScreen() {
                         lineHeight: '22.59px',
                     }}
                 >
-                    Do you already have a Jidzi account? <span style={{ color: '#0066F6' }} >Sign in here</span>
+                    Do you already have a Jidzi account? <span onClick={() => navigate('/signin')} style={{ color: '#0066F6' }} >Sign in here</span>
                 </Typography>
             </Box>
         </Box>
