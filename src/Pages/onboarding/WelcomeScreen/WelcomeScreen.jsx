@@ -1,7 +1,9 @@
 import { Box, Typography, Button } from '@mui/material'
 import React from 'react'
+import { useNavigate } from "react-router-dom"
 
 function WelcomeScreen() {
+    const navigate = useNavigate()
     return (
         <Box
             sx={{
@@ -46,6 +48,7 @@ function WelcomeScreen() {
                     borderRadius: '5px',
                     mb: '20px'
                 }}
+                onClick={() => navigate('/signup')}
             >
                 create your free account
             </Button>
@@ -58,6 +61,7 @@ function WelcomeScreen() {
                     border: '1px solid #999999',
                     borderRadius: '5px'
                 }}
+                onClick={() => navigate('/signin')}
             >
                 log into your account
             </Button>
