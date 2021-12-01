@@ -77,7 +77,7 @@ function ForgotPasswordScreen() {
             <Box
                 sx={{
                     position: 'absolute',
-                    bottom: '20px',
+                    bottom: '10px',
                     width: '90%'
                 }}
             >
@@ -88,7 +88,7 @@ function ForgotPasswordScreen() {
                         width: '100%',
                         height: '50px',
                         borderRadius: '5px',
-                        mb: '20px'
+                        mb: '10px'
                     }}
                 >
                     Recover password
