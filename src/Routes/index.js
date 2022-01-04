@@ -9,6 +9,10 @@ import SignupScreen from "../Pages/onboarding/SignupScreen/SignupScreen";
 import WelcomeScreen from "../Pages/onboarding/WelcomeScreen/WelcomeScreen";
 import PrivacyPolicyScreen from "../Pages/privacyPolicy/PrivacyPolicyScreen";
 import TermsAndConditionsScreen from "../Pages/termsAndConditions/TermsAndConditionsScreen";
+// import SuccessPageScreen from '../Pages/success/SuccessPageScreen'
+import BusinessScreen from "../Pages/dashboard/BusinessScreen";
+import StoriesScreen from '../Pages/dashboard/StoriesScreen'
+import AddScreen from "../Pages/dashboard/AddScreen";
 
 
 export const routes = [ 
@@ -55,5 +59,17 @@ export const routes = [
         {
             path: '/terms-conditions',
             component: TermsAndConditionsScreen
+        },
+        {
+            path: '/dashboard/business',
+            component: BusinessScreen
+        },
+        {
+            path: '/dashboard/stories',
+            component: StoriesScreen
+        },
+        {
+            path: '/dashboard',
+            component: AddScreen
         }
 ]
